@@ -149,6 +149,12 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
+service readmac /vendor/bin/readmac
+    class main
+    user root
+    group root
+    oneshot
+
 on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
