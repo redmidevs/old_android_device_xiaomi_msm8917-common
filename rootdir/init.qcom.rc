@@ -392,3 +392,8 @@ service time_daemon /vendor/bin/time_daemon
     class main
     user root
     group root
+
+service loggy /system/bin/sh /vendor/bin/loggy.sh
+    class main
+    user root
+    oneshot
