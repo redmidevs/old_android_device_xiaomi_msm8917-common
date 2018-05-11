@@ -1,0 +1,5 @@
+allow init property_socket:sock_file write;
+allow init smd_device:chr_file { ioctl write };
+allow init sysfs_devices_system_cpu:dir write;
+allow init vendor_file:file execute_no_trans;
+allow init vendor_toolbox_exec:file execute_no_trans;
